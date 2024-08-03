@@ -6,7 +6,7 @@ const { QUEUE_EVENT_HANDLERS } = require("./handlers");
 const redisConnection = {
   host: process.env.REDIS_SERVER || "localhost",
   port: 6379,
-  tls: {}, // This ensures that the connection uses TLS/SSL.
+  // tls: {}, // This ensures that the connection uses TLS/SSL.
 };
 
 const listenQueueEvent = (queueName) => {

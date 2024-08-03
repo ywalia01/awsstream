@@ -40,8 +40,10 @@ class MongoManager {
       "mongodb+srv://admin:Yash%401234@vidstream.u66ndsu.mongodb.net/videodb?retryWrites=true&w=majority";
 
     const client = new MongoClient(mongoUrl, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true, // Ensures compatibility with newer MongoDB versions
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true, // Ensures compatibility with newer MongoDB versions
+      tls: true,
+      tlsAllowInvalidCertificates: true, // Use only if you are aware of the security implications
     });
 
     // logger.info("Connecting to MongoDB");
